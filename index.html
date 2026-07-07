@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SwiftFix – Doorstep Computer Repair</title>
+    <title>PC Doc – Computer Repair & Laptop Sales | Gulu, Uganda</title>
 
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -74,14 +74,111 @@
         .trust-badge:hover {
             transform: scale(1.05);
         }
+        .hero-image-overlay {
+            background: linear-gradient(135deg, rgba(26, 59, 92, 0.85) 0%, rgba(42, 95, 122, 0.75) 100%);
+        }
+        .bg-repair-1 {
+            background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-repair-2 {
+            background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-repair-3 {
+            background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-repair-4 {
+            background-image: url('https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-repair-5 {
+            background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-repair-6 {
+            background-image: url('https://images.unsplash.com/photo-1530882450550-0c666efe3657?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-repair-7 {
+            background-image: url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-repair-8 {
+            background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-repair-9 {
+            background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b853aba4?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-repair-10 {
+            background-image: url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .img-hover-zoom {
+            transition: transform 0.5s ease;
+        }
+        .img-hover-zoom:hover {
+            transform: scale(1.05);
+        }
+        /* Floating contact buttons */
+        .contact-float {
+            position: fixed;
+            right: 24px;
+            z-index: 998;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .contact-float .btn-float {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .contact-float .btn-float:hover {
+            transform: scale(1.1);
+        }
+        .btn-call { background: #34B7F1; }
+        .btn-email { background: #EA4335; }
     </style>
 </head>
 <body>
 
     <!-- ============================================ -->
+    <!-- FLOATING CONTACT BUTTONS (Right side)       -->
+    <!-- ============================================ -->
+    <div class="contact-float" style="bottom: 100px;">
+        <a href="tel:+256791791035" class="btn-float btn-call" title="Call PC Doc">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="mailto:pcdocgulu@gmail.com" class="btn-float btn-email" title="Email PC Doc">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <!-- ============================================ -->
     <!-- FLOATING WHATSAPP BUTTON (Always visible)     -->
     <!-- ============================================ -->
-    <a href="https://wa.me/256750047247?text=Hi!%20I%20need%20my%20PC%20fixed%20at%20my%20location.%20Please%20assist%20me."
+    <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I%20need%20help%20with%20my%20computer.%20Please%20assist%20me."
        class="floating-whatsapp"
        target="_blank"
        aria-label="Chat on WhatsApp">
@@ -91,25 +188,26 @@
     <!-- ============================================ -->
     <!-- HERO SECTION                                 -->
     <!-- ============================================ -->
-    <header class="gradient-bg min-h-screen flex items-center text-white px-6 md:px-20">
-        <div class="max-w-6xl mx-auto w-full">
+    <header class="min-h-screen flex items-center text-white px-6 md:px-20 relative bg-repair-1">
+        <div class="absolute inset-0 hero-image-overlay"></div>
+        <div class="max-w-6xl mx-auto w-full relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <!-- Left Content -->
                 <div data-aos="fade-right" data-aos-duration="1000">
                     <div class="flex items-center gap-2 mb-4">
                         <i class="fas fa-laptop-medical text-accent text-3xl"></i>
-                        <span class="text-xl font-bold tracking-tight">SwiftFix</span>
+                        <span class="text-2xl font-bold tracking-tight">PC Doc</span>
                     </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-                        We Come to You.<br />
-                        <span class="text-accent">Fix It Fast.</span>
+                        Your Computer <br />
+                        <span class="text-accent">is in Safe Hands.</span>
                     </h1>
                     <p class="text-lg md:text-xl text-gray-300 mt-4 leading-relaxed">
-                        Doorstep computer repair. Diagnose for free. Pay only after
-                        <span class="text-white font-semibold">you verify</span> it works.
+                        Professional repair, maintenance, and laptop sales in Gulu. 
+                        <span class="text-white font-semibold">Free diagnosis</span> – pay only when you're satisfied.
                     </p>
                     <div class="flex flex-wrap gap-4 mt-8">
-                        <a href="https://wa.me/256750047247?text=Hi!%20I%20need%20my%20PC%20fixed%20at%20my%20location.%20Please%20assist%20me."
+                        <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I%20need%20help%20with%20my%20computer.%20Please%20assist%20me."
                            target="_blank"
                            class="bg-accent hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full transition-all shadow-lg hover:shadow-orange-500/30 flex items-center gap-2">
                             <i class="fab fa-whatsapp text-xl"></i>
@@ -117,20 +215,24 @@
                         </a>
                         <a href="#services"
                            class="border-2 border-white hover:bg-white hover:text-primary text-white font-bold py-4 px-8 rounded-full transition-all">
-                            See Services
+                            Our Services
                         </a>
                     </div>
-                    <div class="flex items-center gap-6 mt-8 text-sm text-gray-300">
-                        <span><i class="fas fa-check-circle text-accent mr-1"></i> No Fix, No Fee</span>
+                    <div class="flex flex-wrap items-center gap-6 mt-8 text-sm text-gray-300">
+                        <span><i class="fas fa-check-circle text-accent mr-1"></i> Free Diagnosis</span>
                         <span><i class="fas fa-check-circle text-accent mr-1"></i> 30-Day Warranty</span>
                         <span><i class="fas fa-check-circle text-accent mr-1"></i> Data 100% Safe</span>
+                        <span><i class="fas fa-check-circle text-accent mr-1"></i> Pay After Verification</span>
+                    </div>
+                    <div class="mt-6 flex items-center gap-4 text-sm text-gray-300">
+                        <span><i class="fas fa-map-marker-alt text-accent mr-1"></i> Gulu City Mall, Room 12, 1st Floor</span>
                     </div>
                 </div>
 
                 <!-- Right Image / Illustration -->
                 <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center">
                     <div class="relative">
-                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-accent/20 flex items-center justify-center">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-accent/20 flex items-center justify-center border-4 border-accent/30">
                             <i class="fas fa-laptop text-8xl md:text-9xl text-white/80"></i>
                         </div>
                         <!-- Floating badge -->
@@ -211,7 +313,7 @@
                     <i class="fas fa-bug text-accent text-3xl mb-3"></i>
                     <h3 class="text-xl font-bold text-primary">Virus & Malware Removal</h3>
                     <p class="text-gray-500 text-sm mt-1">Remove all viruses, spyware, and ransomware.</p>
-                    <p class="text-2xl font-bold text-primary mt-3">From Ugx. </p>
+                    <p class="text-2xl font-bold text-primary mt-3">40,000 - 70,000 UGX</p>
                     <span class="text-xs text-gray-400">Includes free diagnostic</span>
                 </div>
 
@@ -220,7 +322,7 @@
                     <i class="fas fa-tachometer-alt text-accent text-3xl mb-3"></i>
                     <h3 class="text-xl font-bold text-primary">Slow PC Optimization</h3>
                     <p class="text-gray-500 text-sm mt-1">Clean junk files, optimize startup, boost speed.</p>
-                    <p class="text-2xl font-bold text-primary mt-3">From Ugx.</p>
+                    <p class="text-2xl font-bold text-primary mt-3">50,000 - 80,000 UGX</p>
                     <span class="text-xs text-gray-400">Includes performance report</span>
                 </div>
 
@@ -229,16 +331,16 @@
                     <i class="fas fa-microchip text-accent text-3xl mb-3"></i>
                     <h3 class="text-xl font-bold text-primary">Hardware Repair</h3>
                     <p class="text-gray-500 text-sm mt-1">Screen, keyboard, battery, charging port, and more.</p>
-                    <p class="text-2xl font-bold text-primary mt-3">From Ugx.</p>
+                    <p class="text-2xl font-bold text-primary mt-3">40,000 + parts UGX</p>
                     <span class="text-xs text-gray-400">Genuine parts used</span>
                 </div>
 
                 <!-- Service 4 -->
                 <div data-aos="fade-up" data-aos-delay="250" class="service-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                     <i class="fas fa-hdd text-accent text-3xl mb-3"></i>
-                    <h3 class="text-xl font-bold text-primary">SSD and RAM Upgrade</h3>
-                    <p class="text-gray-500 text-sm mt-1">Replace old HDD with SSD, Add new RAM chips for blazing speed</p>
-                    <p class="text-2xl font-bold text-primary mt-3">From Ugx.</p>
+                    <h3 class="text-xl font-bold text-primary">SSD & RAM Upgrade</h3>
+                    <p class="text-gray-500 text-sm mt-1">Replace old HDD with SSD, add new RAM for blazing speed.</p>
+                    <p class="text-2xl font-bold text-primary mt-3">From 100,000 UGX</p>
                     <span class="text-xs text-gray-400">Includes data transfer</span>
                 </div>
 
@@ -247,17 +349,17 @@
                     <i class="fas fa-wifi text-accent text-3xl mb-3"></i>
                     <h3 class="text-xl font-bold text-primary">Network & WiFi Setup</h3>
                     <p class="text-gray-500 text-sm mt-1">Home/office WiFi setup, security, and troubleshooting.</p>
-                    <p class="text-2xl font-bold text-primary mt-3">From Ugx.</p>
+                    <p class="text-2xl font-bold text-primary mt-3">30,000 - 60,000 UGX</p>
                     <span class="text-xs text-gray-400">Includes security setup</span>
                 </div>
 
                 <!-- Service 6 -->
                 <div data-aos="fade-up" data-aos-delay="350" class="service-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                     <i class="fas fa-laptop text-accent text-3xl mb-3"></i>
-                    <h3 class="text-xl font-bold text-primary">Brand-new Computers Or Second-Hand Laptops</h3>
-                    <p class="text-gray-500 text-sm mt-1">Quality tested, cleaned, with 1-month warranty.</p>
-                    <p class="text-2xl font-bold text-primary mt-3">From Ugx. 300,000 (Negotiable)</p>
-                    <span class="text-xs text-gray-400">Ask for available models</span>
+                    <h3 class="text-xl font-bold text-primary">Laptop Sales</h3>
+                    <p class="text-gray-500 text-sm mt-1">Brand-new or refurbished laptops. Tested, cleaned, with warranty.</p>
+                    <p class="text-2xl font-bold text-primary mt-3">From 399,000 UGX</p>
+                    <span class="text-xs text-gray-400">Call for available models</span>
                 </div>
             </div>
         </div>
@@ -294,7 +396,7 @@
     </section>
 
     <!-- ============================================ -->
-    <!-- REPAIR GALLERY (YouTube Shorts)             -->
+    <!-- REPAIR GALLERY (YouTube Shorts & Images)    -->
     <!-- ============================================ -->
     <section class="py-20 px-6 md:px-20 bg-lightgray" id="gallery">
         <div class="max-w-6xl mx-auto">
@@ -310,20 +412,22 @@
                 <!-- Video Thumbnail 1 -->
                 <div data-aos="zoom-in" data-aos-delay="100" class="bg-white rounded-2xl overflow-hidden shadow-sm">
                     <a href="https://www.youtube.com/shorts/YOUR_VIDEO_ID" target="_blank">
-                        <div class="bg-primary/10 h-48 flex items-center justify-center">
-                            <i class="fas fa-play-circle text-accent text-6xl hover:scale-110 transition-transform"></i>
+                        <div class="bg-repair-2 h-48 flex items-center justify-center relative">
+                            <div class="absolute inset-0 bg-black/30 hover:bg-black/10 transition-all"></div>
+                            <i class="fas fa-play-circle text-white text-6xl hover:scale-110 transition-transform relative z-10"></i>
                         </div>
                         <div class="p-4">
                             <p class="font-semibold text-primary">Laptop Boots in 10 Seconds!</p>
-                            <p class="text-sm text-gray-500">HDD → SSD upgrade. Client saved Ugx.</p>
+                            <p class="text-sm text-gray-500">HDD → SSD upgrade. Client saved big.</p>
                         </div>
                     </a>
                 </div>
                 <!-- Video Thumbnail 2 -->
                 <div data-aos="zoom-in" data-aos-delay="200" class="bg-white rounded-2xl overflow-hidden shadow-sm">
                     <a href="https://www.youtube.com/shorts/YOUR_VIDEO_ID" target="_blank">
-                        <div class="bg-primary/10 h-48 flex items-center justify-center">
-                            <i class="fas fa-play-circle text-accent text-6xl hover:scale-110 transition-transform"></i>
+                        <div class="bg-repair-3 h-48 flex items-center justify-center relative">
+                            <div class="absolute inset-0 bg-black/30 hover:bg-black/10 transition-all"></div>
+                            <i class="fas fa-play-circle text-white text-6xl hover:scale-110 transition-transform relative z-10"></i>
                         </div>
                         <div class="p-4">
                             <p class="font-semibold text-primary">Screen Replacement Done!</p>
@@ -334,14 +438,255 @@
                 <!-- Video Thumbnail 3 -->
                 <div data-aos="zoom-in" data-aos-delay="300" class="bg-white rounded-2xl overflow-hidden shadow-sm">
                     <a href="https://www.youtube.com/shorts/YOUR_VIDEO_ID" target="_blank">
-                        <div class="bg-primary/10 h-48 flex items-center justify-center">
-                            <i class="fas fa-play-circle text-accent text-6xl hover:scale-110 transition-transform"></i>
+                        <div class="bg-repair-4 h-48 flex items-center justify-center relative">
+                            <div class="absolute inset-0 bg-black/30 hover:bg-black/10 transition-all"></div>
+                            <i class="fas fa-play-circle text-white text-6xl hover:scale-110 transition-transform relative z-10"></i>
                         </div>
                         <div class="p-4">
                             <p class="font-semibold text-primary">Virus Removal & Speed Boost</p>
                             <p class="text-sm text-gray-500">PC running 3x faster after cleanup.</p>
                         </div>
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- LAPTOP SALES SECTION                        -->
+    <!-- ============================================ -->
+    <section class="py-20 px-6 md:px-20 bg-white" id="laptops">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-accent font-semibold text-sm uppercase tracking-wider">Quality Hardware</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mt-2">Laptops for Every Budget</h2>
+                <p class="text-gray-500 mt-2 max-w-2xl mx-auto">
+                    New and refurbished laptops. Tested, cleaned, and backed with a warranty.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Laptop 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="service-card bg-lightgray rounded-2xl overflow-hidden shadow-sm">
+                    <div class="bg-repair-5 h-48 flex items-center justify-center text-white text-4xl">
+                        <i class="fas fa-laptop text-primary/40 text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary">Entry Level</h3>
+                        <p class="text-sm text-gray-500 mt-1">Toshiba Dynabook, Celeron, 4GB RAM</p>
+                        <p class="text-2xl font-bold text-accent mt-3">399,000 UGX</p>
+                        <ul class="text-sm text-gray-500 mt-3 space-y-1">
+                            <li><i class="fas fa-check text-accent mr-2"></i> 128GB SSD</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i> 14" Display</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i> 3-Month Warranty</li>
+                        </ul>
+                        <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I'm%20interested%20in%20the%20Entry%20Level%20laptop."
+                           target="_blank"
+                           class="block text-center bg-accent hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg mt-4 transition">
+                            <i class="fab fa-whatsapp mr-2"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Laptop 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="service-card bg-lightgray rounded-2xl overflow-hidden shadow-sm">
+                    <div class="bg-repair-6 h-48 flex items-center justify-center text-white text-4xl">
+                        <i class="fas fa-laptop text-primary/40 text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary">Mid Range</h3>
+                        <p class="text-sm text-gray-500 mt-1">Dell Latitude, Core i5, 8GB RAM</p>
+                        <p class="text-2xl font-bold text-accent mt-3">690,000 - 900,000 UGX</p>
+                        <ul class="text-sm text-gray-500 mt-3 space-y-1">
+                            <li><i class="fas fa-check text-accent mr-2"></i> 256GB SSD</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i> 15.6" Display</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i> 6-Month Warranty</li>
+                        </ul>
+                        <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I'm%20interested%20in%20the%20Mid%20Range%20laptop."
+                           target="_blank"
+                           class="block text-center bg-accent hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg mt-4 transition">
+                            <i class="fab fa-whatsapp mr-2"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Laptop 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="service-card bg-lightgray rounded-2xl overflow-hidden shadow-sm">
+                    <div class="bg-repair-7 h-48 flex items-center justify-center text-white text-4xl">
+                        <i class="fas fa-laptop text-primary/40 text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary">Premium / New</h3>
+                        <p class="text-sm text-gray-500 mt-1">Latest models, high performance</p>
+                        <p class="text-2xl font-bold text-accent mt-3">Call for Price</p>
+                        <ul class="text-sm text-gray-500 mt-3 space-y-1">
+                            <li><i class="fas fa-check text-accent mr-2"></i> Core i7 / Ryzen 7</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i> 16GB+ RAM</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i> 1-Year Warranty</li>
+                        </ul>
+                        <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I'm%20interested%20in%20a%20Premium%20laptop."
+                           target="_blank"
+                           class="block text-center bg-accent hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg mt-4 transition">
+                            <i class="fab fa-whatsapp mr-2"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PACKAGES SECTION (Simple, Affordable)       -->
+    <!-- ============================================ -->
+    <section class="py-20 px-6 md:px-20 bg-lightgray" id="packages">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-accent font-semibold text-sm uppercase tracking-wider">Value Packages</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mt-2">Simple, Affordable Plans</h2>
+                <p class="text-gray-500 mt-2 max-w-2xl mx-auto">
+                    Bundled services at a better price. Perfect for individuals and small businesses.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Package 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="service-card bg-white rounded-2xl p-6 shadow-sm border-2 border-gray-100">
+                    <div class="text-center">
+                        <div class="inline-block bg-primary/10 text-primary font-bold text-xs px-3 py-1 rounded-full mb-2">POPULAR</div>
+                        <h3 class="text-xl font-bold text-primary">Basic Tune-Up</h3>
+                        <p class="text-3xl font-bold text-accent mt-2">70,000 UGX</p>
+                        <p class="text-sm text-gray-500">Great for a quick speed boost</p>
+                    </div>
+                    <ul class="text-sm text-gray-500 mt-4 space-y-2">
+                        <li><i class="fas fa-check text-accent mr-2"></i> Full virus/malware scan & removal</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i> System performance optimization</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i> Junk file cleanup</li>
+                    </ul>
+                    <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I%20want%20the%20Basic%20Tune-Up%20package."
+                       target="_blank"
+                       class="block text-center bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg mt-4 transition">
+                        <i class="fab fa-whatsapp mr-2"></i> Book Now
+                    </a>
+                </div>
+
+                <!-- Package 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="service-card bg-white rounded-2xl p-6 shadow-sm border-2 border-accent">
+                    <div class="text-center">
+                        <div class="inline-block bg-accent text-white font-bold text-xs px-3 py-1 rounded-full mb-2">BEST VALUE</div>
+                        <h3 class="text-xl font-bold text-primary">Software Setup</h3>
+                        <p class="text-3xl font-bold text-accent mt-2">80,000 UGX</p>
+                        <p class="text-sm text-gray-500">Perfect for students and new PCs</p>
+                    </div>
+                    <ul class="text-sm text-gray-500 mt-4 space-y-2">
+                        <li><i class="fas fa-check text-accent mr-2"></i> Windows installation</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i> Essential software setup (Office Suite)</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i> Basic optimization</li>
+                    </ul>
+                    <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I%20want%20the%20Software%20Setup%20package."
+                       target="_blank"
+                       class="block text-center bg-accent hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg mt-4 transition">
+                        <i class="fab fa-whatsapp mr-2"></i> Book Now
+                    </a>
+                </div>
+
+                <!-- Package 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="service-card bg-white rounded-2xl p-6 shadow-sm border-2 border-gray-100">
+                    <div class="text-center">
+                        <div class="inline-block bg-primary/10 text-primary font-bold text-xs px-3 py-1 rounded-full mb-2">COMPLETE</div>
+                        <h3 class="text-xl font-bold text-primary">Full Service</h3>
+                        <p class="text-3xl font-bold text-accent mt-2">120,000 UGX</p>
+                        <p class="text-sm text-gray-500">All-in-one peace of mind</p>
+                    </div>
+                    <ul class="text-sm text-gray-500 mt-4 space-y-2">
+                        <li><i class="fas fa-check text-accent mr-2"></i> Basic Tune-Up included</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i> Hardware check-up & cleaning</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i> Performance optimization</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i> Priority support</li>
+                    </ul>
+                    <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I%20want%20the%20Full%20Service%20package."
+                       target="_blank"
+                       class="block text-center bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg mt-4 transition">
+                        <i class="fab fa-whatsapp mr-2"></i> Book Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- LOCATION & CONTACT SECTION                  -->
+    <!-- ============================================ -->
+    <section class="py-20 px-6 md:px-20 bg-white" id="contact">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <span class="text-accent font-semibold text-sm uppercase tracking-wider">Visit Us</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mt-2">We're at Gulu City Mall</h2>
+                    <p class="text-gray-500 mt-4 leading-relaxed">
+                        Come see us at our office. We're conveniently located in the heart of Gulu.
+                    </p>
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-semibold text-primary">Address</p>
+                                <p class="text-gray-500">Gulu City Mall, First Floor, Room 12, Gulu, Uganda</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-phone text-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-semibold text-primary">Call</p>
+                                <p class="text-gray-500">0791 791035</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fab fa-whatsapp text-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-semibold text-primary">WhatsApp</p>
+                                <p class="text-gray-500">0750 047247</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-envelope text-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-semibold text-primary">Email</p>
+                                <p class="text-gray-500">pcdocgulu@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-clock text-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-semibold text-primary">Working Hours</p>
+                                <p class="text-gray-500">Mon - Fri: 8:00 AM - 6:00 PM<br />Sat: 9:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-6">
+                        <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I%20need%20help%20with%20my%20computer."
+                           target="_blank"
+                           class="bg-accent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full transition shadow-lg hover:shadow-orange-500/30">
+                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+                        </a>
+                        <a href="tel:+256791791035"
+                           class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-full transition">
+                            <i class="fas fa-phone mr-2"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="relative">
+                    <div class="bg-repair-8 h-96 rounded-2xl shadow-xl flex items-center justify-center text-white text-6xl">
+                        <i class="fas fa-store text-primary/20 text-9xl"></i>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-map-pin text-accent text-2xl"></i>
+                            <div>
+                                <p class="font-bold text-primary">PC Doc</p>
+                                <p class="text-xs text-gray-500">Room 12, First Floor</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -359,7 +704,7 @@
             <p class="text-gray-300 text-lg mt-4">
                 Free diagnosis. Pay only when you verify the fix. Book in under 60 seconds.
             </p>
-            <a href="https://wa.me/256750047247?text=Hi!%20I%20need%20my%20PC%20fixed%20at%20my%20location.%20Please%20assist%20me."
+            <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I%20need%20help%20with%20my%20computer.%20Please%20assist%20me."
                target="_blank"
                class="inline-block bg-accent hover:bg-orange-600 text-white font-bold py-4 px-12 rounded-full mt-8 transition-all shadow-lg hover:shadow-orange-500/30 text-lg">
                 <i class="fab fa-whatsapp mr-2"></i>
@@ -376,7 +721,7 @@
     <!-- ============================================ -->
     <footer class="bg-primary/95 text-gray-300 py-8 px-6 md:px-20">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
-            <p>&copy; 2026 SwiftFix. All rights reserved.</p>
+            <p>&copy; 2026 PC Doc. All rights reserved. | Gulu, Uganda</p>
             <div class="flex gap-6 mt-4 md:mt-0">
                 <a href="#" class="hover:text-white transition">Privacy Policy</a>
                 <a href="#" class="hover:text-white transition">Terms of Service</a>
@@ -401,7 +746,7 @@
         });
     </script>
 
-    <!-- Smooth scroll for anchor links (if any) -->
+    <!-- Smooth scroll for anchor links -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
