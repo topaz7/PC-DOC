@@ -3,40 +3,49 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO: Title & Description -->
     <title>PC Doc – Computer Repair & Laptop Sales | Gulu, Uganda</title>
-
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    <!-- Custom Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1A3B5C',
-                        accent: '#FF7A00',
-                        lightgray: '#F8F9FA',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                },
-            },
-        }
-    </script>
-
+    <meta name="description" content="PC Doc provides professional computer repair, laptop sales, and IT support in Gulu, Uganda. Free diagnosis, pay after verification. Call 0791 791035." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://pcdoc.arctilcine.xyz/" />
+    
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="PC Doc – Computer Repair & Laptop Sales | Gulu, Uganda" />
+    <meta property="og:description" content="Professional computer repair, laptop sales, and IT support in Gulu. Free diagnosis, pay after verification." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pcdoc.arctilcine.xyz/" />
+    
+    <!-- Preconnect to critical 3rd-party origins -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    
+    <!-- Tailwind CSS (CSS-only, not render-blocking JS) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    
+    <!-- AOS Animation Library (loaded async) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /></noscript>
+    
+    <!-- Font Awesome Icons with display=swap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css?display=swap" />
+    
+    <!-- Preload critical hero image (resized) -->
+    <link rel="preload" as="image" href="assets/image/heroo-woman-400w.webp" imagesrcset="assets/image/heroo-woman-400w.webp 400w, assets/image/heroo-woman-800w.webp 800w" imagesizes="(max-width: 768px) 300px, 400px" />
+    
     <style>
-        /* Smooth scrolling & custom styles */
+        /* Critical CSS - inlined for faster rendering */
+        :root {
+            --color-primary: #1A3B5C;
+            --color-accent: #FF7A00;
+            --color-lightgray: #F8F9FA;
+        }
+        
         html {
             scroll-behavior: smooth;
         }
+        
         .floating-whatsapp {
             position: fixed;
             bottom: 24px;
@@ -54,86 +63,51 @@
             box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
             transition: transform 0.3s ease;
         }
+        
         .floating-whatsapp:hover {
             transform: scale(1.1);
             color: white;
         }
+        
         .gradient-bg {
             background: linear-gradient(135deg, #1A3B5C 0%, #2A5F7A 100%);
         }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
         .service-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
-        .service-card {
-            transition: all 0.3s ease;
-        }
+        
         .trust-badge {
             transition: all 0.3s ease;
         }
+        
         .trust-badge:hover {
             transform: scale(1.05);
         }
+        
         .hero-image-overlay {
             background: linear-gradient(135deg, rgba(26, 59, 92, 0.85) 0%, rgba(42, 95, 122, 0.75) 100%);
         }
+        
+        /* Optimized background images - using smaller, WebP versions where possible */
         .bg-repair-1 {
-            background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80');
+            background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=80&fit=crop');
             background-size: cover;
             background-position: center;
         }
-        .bg-repair-2 {
-            background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .bg-repair-3 {
-            background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .bg-repair-4 {
-            background-image: url('https://images.unsplash.com/photo-1498049794561-7780e7231661?w=800&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .bg-repair-5 {
-            background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .bg-repair-6 {
-            background-image: url('https://images.unsplash.com/photo-1530882450550-0c666efe3657?w=800&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .bg-repair-7 {
-            background-image: url('https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=800&q=80');
-            background-size: cover;
-            background-position: center;
-        }
+        
         .bg-repair-8 {
-            background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80');
+            background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&q=80&fit=crop');
             background-size: cover;
             background-position: center;
         }
-        .bg-repair-9 {
-            background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b853aba4?w=800&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .bg-repair-10 {
-            background-image: url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .img-hover-zoom {
-            transition: transform 0.5s ease;
-        }
-        .img-hover-zoom:hover {
-            transform: scale(1.05);
-        }
-        /* Floating contact buttons */
+        
+        /* Contact buttons */
         .contact-float {
             position: fixed;
             right: 24px;
@@ -142,6 +116,7 @@
             flex-direction: column;
             gap: 12px;
         }
+        
         .contact-float .btn-float {
             width: 56px;
             height: 56px;
@@ -154,11 +129,31 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
         }
+        
         .contact-float .btn-float:hover {
             transform: scale(1.1);
         }
+        
         .btn-call { background: #34B7F1; }
         .btn-email { background: #EA4335; }
+        
+        /* Image optimization */
+        .product-img {
+            width: 100%;
+            height: 192px;
+            object-fit: cover;
+            background-color: #f0f0f0;
+        }
+        
+        /* Loading state for images */
+        .product-img:not([src]) {
+            opacity: 0;
+        }
+        
+        .product-img[src] {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -166,36 +161,37 @@
     <!-- ============================================ -->
     <!-- FLOATING CONTACT BUTTONS (Right side)       -->
     <!-- ============================================ -->
-    <div class="contact-float" style="bottom: 100px;">
-        <a href="tel:+256791791035" class="btn-float btn-call" title="Call PC Doc">
-            <i class="fas fa-phone"></i>
+    <div class="contact-float" style="bottom: 100px;" aria-hidden="true">
+        <a href="tel:+256791791035" class="btn-float btn-call" title="Call PC Doc" aria-label="Call PC Doc at 0791 791035">
+            <i class="fas fa-phone" aria-hidden="true"></i>
         </a>
-        <a href="mailto:pcdocgulu@gmail.com" class="btn-float btn-email" title="Email PC Doc">
-            <i class="fas fa-envelope"></i>
+        <a href="mailto:pcdocgulu@gmail.com" class="btn-float btn-email" title="Email PC Doc" aria-label="Email PC Doc at pcdocgulu@gmail.com">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
         </a>
     </div>
 
     <!-- ============================================ -->
-    <!-- FLOATING WHATSAPP BUTTON (Always visible)     -->
+    <!-- FLOATING WHATSAPP BUTTON                     -->
     <!-- ============================================ -->
     <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I%20need%20help%20with%20my%20computer.%20Please%20assist%20me."
        class="floating-whatsapp"
        target="_blank"
-       aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+       rel="noopener noreferrer"
+       aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
     <!-- ============================================ -->
     <!-- HERO SECTION                                 -->
     <!-- ============================================ -->
     <header class="min-h-screen flex items-center text-white px-6 md:px-20 relative bg-repair-1">
-        <div class="absolute inset-0 hero-image-overlay"></div>
+        <div class="absolute inset-0 hero-image-overlay" aria-hidden="true"></div>
         <div class="max-w-6xl mx-auto w-full relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <!-- Left Content -->
                 <div data-aos="fade-right" data-aos-duration="1000">
                     <div class="flex items-center gap-2 mb-4">
-                        <i class="fas fa-laptop-medical text-accent text-3xl"></i>
+                        <i class="fas fa-laptop-medical text-accent text-3xl" aria-hidden="true"></i>
                         <span class="text-2xl font-bold tracking-tight">PC Doc</span>
                     </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
@@ -209,8 +205,9 @@
                     <div class="flex flex-wrap gap-4 mt-8">
                         <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I%20need%20help%20with%20my%20computer.%20Please%20assist%20me."
                            target="_blank"
+                           rel="noopener noreferrer"
                            class="bg-accent hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full transition-all shadow-lg hover:shadow-orange-500/30 flex items-center gap-2">
-                            <i class="fab fa-whatsapp text-xl"></i>
+                            <i class="fab fa-whatsapp text-xl" aria-hidden="true"></i>
                             Book via WhatsApp
                         </a>
                         <a href="#services"
@@ -219,27 +216,34 @@
                         </a>
                     </div>
                     <div class="flex flex-wrap items-center gap-6 mt-8 text-sm text-gray-300">
-                        <span><i class="fas fa-check-circle text-accent mr-1"></i> Free Diagnosis</span>
-                        <span><i class="fas fa-check-circle text-accent mr-1"></i> 30-Day Warranty</span>
-                        <span><i class="fas fa-check-circle text-accent mr-1"></i> Data 100% Safe</span>
-                        <span><i class="fas fa-check-circle text-accent mr-1"></i> Pay After Verification</span>
+                        <span><i class="fas fa-check-circle text-accent mr-1" aria-hidden="true"></i> Free Diagnosis</span>
+                        <span><i class="fas fa-check-circle text-accent mr-1" aria-hidden="true"></i> 30-Day Warranty</span>
+                        <span><i class="fas fa-check-circle text-accent mr-1" aria-hidden="true"></i> Data 100% Safe</span>
+                        <span><i class="fas fa-check-circle text-accent mr-1" aria-hidden="true"></i> Pay After Verification</span>
                     </div>
                     <div class="mt-6 flex items-center gap-4 text-sm text-gray-300">
-                        <span><i class="fas fa-map-marker-alt text-accent mr-1"></i> Gulu City Mall, Room 12, 1st Floor</span>
+                        <span><i class="fas fa-map-marker-alt text-accent mr-1" aria-hidden="true"></i> Gulu City Mall, Room 12, 1st Floor</span>
                     </div>
                 </div>
 
-              <!-- Right Image -->
+                <!-- Right Image -->
                 <div data-aos="fade-left" data-aos-duration="1000" class="flex justify-center">
                     <div class="relative">
                         <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-accent/20 border-4 border-accent/30 overflow-hidden">
-                            <img src="assets/image/heroo-woman.jpg" 
-     alt="IT Support Professional">
+                            <img src="assets/image/heroo-woman-400w.webp" 
+                                 srcset="assets/image/heroo-woman-400w.webp 400w, assets/image/heroo-woman-800w.webp 800w"
+                                 sizes="(max-width: 768px) 256px, 320px"
+                                 alt="PC Doc IT Support Professional at work in Gulu, Uganda"
+                                 width="320" 
+                                 height="320"
+                                 loading="eager"
+                                 fetchpriority="high"
+                                 class="w-full h-full object-cover" />
                         </div>
                 
                         <!-- Floating badge -->
                         <div class="absolute -bottom-4 -right-4 bg-white text-primary px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
-                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400" aria-hidden="true"></i>
                             <span class="font-bold">4.9/5</span>
                             <span class="text-sm text-gray-500">Safe Hands</span>
                         </div>
@@ -252,7 +256,7 @@
     <!-- ============================================ -->
     <!-- HOW IT WORKS                                 -->
     <!-- ============================================ -->
-    <section class="py-20 px-6 md:px-20 bg-white" id="how-it-works">
+    <section class="py-20 px-6 md:px-20 bg-white" id="how-it-works" aria-label="How PC Doc works">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
                 <span class="text-accent font-semibold text-sm uppercase tracking-wider">Simple Process</span>
@@ -266,9 +270,9 @@
                 <!-- Step 1 -->
                 <div data-aos="fade-up" data-aos-delay="100" class="text-center">
                     <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-phone-alt text-primary text-3xl"></i>
+                        <i class="fas fa-phone-alt text-primary text-3xl" aria-hidden="true"></i>
                     </div>
-                    <div class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center mx-auto -mt-10 relative z-10">1</div>
+                    <div class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center mx-auto -mt-10 relative z-10" aria-hidden="true">1</div>
                     <h3 class="text-xl font-bold text-primary mt-4">Contact Us</h3>
                     <p class="text-gray-500">Call or WhatsApp us. Tell us your issue. We'll schedule a time that works for you.</p>
                 </div>
@@ -276,9 +280,9 @@
                 <!-- Step 2 -->
                 <div data-aos="fade-up" data-aos-delay="200" class="text-center">
                     <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-home text-primary text-3xl"></i>
+                        <i class="fas fa-home text-primary text-3xl" aria-hidden="true"></i>
                     </div>
-                    <div class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center mx-auto -mt-10 relative z-10">2</div>
+                    <div class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center mx-auto -mt-10 relative z-10" aria-hidden="true">2</div>
                     <h3 class="text-xl font-bold text-primary mt-4">We Come to You</h3>
                     <p class="text-gray-500">Our technician arrives at your home or office. Diagnose is completely free.</p>
                 </div>
@@ -286,9 +290,9 @@
                 <!-- Step 3 -->
                 <div data-aos="fade-up" data-aos-delay="300" class="text-center">
                     <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-check-circle text-primary text-3xl"></i>
+                        <i class="fas fa-check-circle text-primary text-3xl" aria-hidden="true"></i>
                     </div>
-                    <div class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center mx-auto -mt-10 relative z-10">3</div>
+                    <div class="bg-accent text-white text-sm font-bold rounded-full w-8 h-8 flex items-center justify-center mx-auto -mt-10 relative z-10" aria-hidden="true">3</div>
                     <h3 class="text-xl font-bold text-primary mt-4">Fix & Verify</h3>
                     <p class="text-gray-500">We fix it on the spot. You test it. You're happy. Then you pay. Simple.</p>
                 </div>
@@ -299,7 +303,7 @@
     <!-- ============================================ -->
     <!-- SERVICES                                    -->
     <!-- ============================================ -->
-    <section class="py-20 px-6 md:px-20 bg-lightgray" id="services">
+    <section class="py-20 px-6 md:px-20 bg-lightgray" id="services" aria-label="Our computer repair services">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
                 <span class="text-accent font-semibold text-sm uppercase tracking-wider">What We Fix</span>
@@ -311,57 +315,59 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Service 0 -->
-            <div data-aos="fade-up" data-aos-delay="350" class="service-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <i class="fas fa-code text-accent text-3xl mb-3"></i>
-                <h3 class="text-xl font-bold text-primary">Software Installation & Setup</h3>
-                <p class="text-gray-500 text-sm mt-1">
-                    Installation, configuration, and troubleshooting of operating systems and essential applications.
-                    Windows, Linux, Ubuntu, Microsoft Office, drivers, and professional software solutions.
-                </p>
-                <span class="text-xs text-gray-400">OS installation, updates & software support</span>
-            </div>
+                <div data-aos="fade-up" data-aos-delay="350" class="service-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                    <i class="fas fa-code text-accent text-3xl mb-3" aria-hidden="true"></i>
+                    <h3 class="text-xl font-bold text-primary">Software Installation & Setup</h3>
+                    <p class="text-gray-500 text-sm mt-1">
+                        Installation, configuration, and troubleshooting of operating systems and essential applications.
+                        Windows, Linux, Ubuntu, Microsoft Office, drivers, and professional software solutions.
+                    </p>
+                    <span class="text-xs text-gray-400">OS installation, updates & software support</span>
+                </div>
+                
                 <!-- Service 1 -->
                 <div data-aos="fade-up" data-aos-delay="100" class="service-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                    <i class="fas fa-bug text-accent text-3xl mb-3"></i>
+                    <i class="fas fa-bug text-accent text-3xl mb-3" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold text-primary">Virus & Malware Removal</h3>
                     <p class="text-gray-500 text-sm mt-1">Remove all viruses, spyware, and ransomware.</p>
-                                       <span class="text-xs text-gray-400">Includes free diagnostic</span>
+                    <span class="text-xs text-gray-400">Includes free diagnostic</span>
                 </div>
 
                 <!-- Service 2 -->
                 <div data-aos="fade-up" data-aos-delay="150" class="service-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                    <i class="fas fa-tachometer-alt text-accent text-3xl mb-3"></i>
+                    <i class="fas fa-tachometer-alt text-accent text-3xl mb-3" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold text-primary">Slow PC Optimization</h3>
                     <p class="text-gray-500 text-sm mt-1">Clean junk files, optimize startup, boost speed.</p>
-                                      <span class="text-xs text-gray-400">Includes performance report</span>
+                    <span class="text-xs text-gray-400">Includes performance report</span>
                 </div>
 
                 <!-- Service 3 -->
                 <div data-aos="fade-up" data-aos-delay="200" class="service-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                    <i class="fas fa-microchip text-accent text-3xl mb-3"></i>
+                    <i class="fas fa-microchip text-accent text-3xl mb-3" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold text-primary">Hardware Repair</h3>
                     <p class="text-gray-500 text-sm mt-1">Screen, keyboard, battery, charging port, and more.</p>
-                                <span class="text-xs text-gray-400">Genuine parts used</span>
+                    <span class="text-xs text-gray-400">Genuine parts used</span>
                 </div>
 
                 <!-- Service 4 -->
                 <div data-aos="fade-up" data-aos-delay="250" class="service-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                    <i class="fas fa-hdd text-accent text-3xl mb-3"></i>
+                    <i class="fas fa-hdd text-accent text-3xl mb-3" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold text-primary">SSD & RAM Upgrade</h3>
                     <p class="text-gray-500 text-sm mt-1">Replace old HDD with SSD, add new RAM for blazing speed.</p>
-                                    <span class="text-xs text-gray-400">Includes data transfer</span>
+                    <span class="text-xs text-gray-400">Includes data transfer</span>
                 </div>
 
                 <!-- Service 5 -->
                 <div data-aos="fade-up" data-aos-delay="300" class="service-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                    <i class="fas fa-wifi text-accent text-3xl mb-3"></i>
+                    <i class="fas fa-wifi text-accent text-3xl mb-3" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold text-primary">Network & WiFi Setup</h3>
                     <p class="text-gray-500 text-sm mt-1">Home/office WiFi setup, security, and troubleshooting.</p>
-                                       <span class="text-xs text-gray-400">Includes security setup</span>
+                    <span class="text-xs text-gray-400">Includes security setup</span>
                 </div>
-                                <!-- Service 6 -->
+                
+                <!-- Service 6 -->
                 <div data-aos="fade-up" data-aos-delay="300" class="service-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                    <i class="fas fa-headset text-accent text-3xl mb-3"></i>
+                    <i class="fas fa-headset text-accent text-3xl mb-3" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold text-primary">General IT Support & Consultancy</h3>
                     <p class="text-gray-500 text-sm mt-1">
                         Expert IT advice, technical support, system optimization, and technology solutions for homes and businesses.
@@ -371,7 +377,7 @@
 
                 <!-- Service 7 -->
                 <div data-aos="fade-up" data-aos-delay="350" class="service-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                    <i class="fas fa-laptop text-accent text-3xl mb-3"></i>
+                    <i class="fas fa-laptop text-accent text-3xl mb-3" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold text-primary">Laptop Sales</h3>
                     <p class="text-gray-500 text-sm mt-1">Brand-new or refurbished laptops. Tested, cleaned, with Free servicing offers.</p>
                     <p class="text-2xl font-bold text-primary mt-3">Tailored to your budget and needs</p>
@@ -384,7 +390,7 @@
     <!-- ============================================ -->
     <!-- WHY TRUST US (Trust Badges)                  -->
     <!-- ============================================ -->
-    <section class="py-20 px-6 md:px-20 bg-white" id="trust">
+    <section class="py-20 px-6 md:px-20 bg-white" id="trust" aria-label="Why choose PC Doc">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
                 <span class="text-accent font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
@@ -393,17 +399,17 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div data-aos="flip-up" data-aos-delay="100" class="trust-badge text-center p-6 bg-lightgray rounded-2xl">
-                    <i class="fas fa-shield-alt text-accent text-5xl mb-4"></i>
+                    <i class="fas fa-shield-alt text-accent text-5xl mb-4" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold text-primary">Data Privacy Guaranteed</h3>
                     <p class="text-gray-500 text-sm">We never copy, share, or access your personal files without permission.</p>
                 </div>
                 <div data-aos="flip-up" data-aos-delay="200" class="trust-badge text-center p-6 bg-lightgray rounded-2xl">
-                    <i class="fas fa-handshake text-accent text-5xl mb-4"></i>
+                    <i class="fas fa-handshake text-accent text-5xl mb-4" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold text-primary">Pay After Verification</h3>
                     <p class="text-gray-500 text-sm">You test the device yourself. Only pay when you're 100% satisfied.</p>
                 </div>
                 <div data-aos="flip-up" data-aos-delay="300" class="trust-badge text-center p-6 bg-lightgray rounded-2xl">
-                    <i class="fas fa-medal text-accent text-5xl mb-4"></i>
+                    <i class="fas fa-medal text-accent text-5xl mb-4" aria-hidden="true"></i>
                     <h3 class="text-xl font-bold text-primary">30-Day Work Warranty</h3>
                     <p class="text-gray-500 text-sm">If the same issue returns within 30 days, we fix it again for free.</p>
                 </div>
@@ -411,255 +417,182 @@
         </div>
     </section>
 
-   
-<!-- ============================================ -->
-<!-- LAPTOP SALES SECTION                         -->
-<!-- ============================================ -->
-<section class="py-20 px-6 md:px-20 bg-white" id="laptops">
-
-<div class="max-w-6xl mx-auto">
-
-<div class="text-center mb-16">
-    <span class="text-accent font-semibold text-sm uppercase tracking-wider">
-        Quality Laptops
-    </span>
-
-    <h2 class="text-3xl md:text-4xl font-bold text-primary mt-2">
-        Laptops for Every Need
-    </h2>
-
-    <p class="text-gray-500 mt-2 max-w-2xl mx-auto">
-        Whether you're a student, professional or power user, we have reliable new and refurbished laptops to suit every budget.
-    </p>
-</div>
-
-<div class="grid md:grid-cols-3 gap-6">
-
-    <!-- Budget -->
-    <div class="service-card bg-lightgray rounded-2xl overflow-hidden shadow-sm">
-        <img src="assets/image/laptop1.jpg"class="h-48 w-full object-cover">
-
-               <div class="p-6">
-
-            <h3 class="text-xl font-bold text-primary">
-                Budget Laptops
-            </h3>
-
-            <p class="text-sm text-gray-500 mt-1">
-                Perfect for students, office work and everyday computing. Brand new ones
-            </p>
-
-            <p class="text-2xl font-bold text-accent mt-3">
-                From UGX 450,000 to UGX 1.2M 
-            </p>
-
-            <ul class="text-sm text-gray-500 mt-3 space-y-1">
-                <li>✔ Intel Celeron / Core i3 / Core i5</li>
-                <li>✔ 4GB–8GB RAM</li>
-                <li>✔ 128GB–256GB SSD</li>
-                <li>✔ 3-Month Free servicing</li>
-            </ul>
-
-        </div>
-
-    </div>
-
-    <!-- Business -->
-
-    <div class="service-card bg-lightgray rounded-2xl overflow-hidden shadow-sm">
-
-      <img src="assets/image/laptop.jpg"class="h-48 w-full object-cover">
-
-        <div class="p-6">
-
-            <h3 class="text-xl font-bold text-primary">
-                Business Laptops
-            </h3>
-
-            <p class="text-sm text-gray-500 mt-1">
-                Reliable performance for professionals and businesses. Brand new ones
-            </p>
-
-            <p class="text-2xl font-bold text-accent mt-3">
-                UGX 1.5M – 3.5M 
-            </p>
-
-            <ul class="text-sm text-gray-500 mt-3 space-y-1">
-                <li>✔ Dell Latitude</li>
-                <li>✔ HP EliteBook</li>
-                <li>✔ Lenovo ThinkPad</li>
-                <li>✔ 6-Month Free servicing</li>
-            </ul>
-
-        </div>
-
-    </div>
-
-    <!-- Premium -->
-
-    <div class="service-card bg-lightgray rounded-2xl overflow-hidden shadow-sm">
-   <img src="assets/image/laptop2.jpg"class="h-48 w-full object-cover">
-
-        <div class="p-6">
-
-            <h3 class="text-xl font-bold text-primary">
-                Performance Laptops
-            </h3>
-
-            <p class="text-sm text-gray-500 mt-1">
-                High-performance laptops for creators, developers and gamers.
-            </p>
-
-            <p class="text-2xl font-bold text-accent mt-3">
-                From UGX 3.5M
-            </p>
-
-            <ul class="text-sm text-gray-500 mt-3 space-y-1">
-                <li>✔ Core i7 / Ryzen 7+</li>
-                <li>✔ 16GB+ RAM</li>
-                <li>✔ SSD Storage</li>
-                <li>✔ 1-Year Free servicing</li>
-            </ul>
-
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
     <!-- ============================================ -->
-<!-- DESKTOP SALES SECTION                        -->
-<!-- ============================================ -->
+    <!-- LAPTOP SALES SECTION                         -->
+    <!-- ============================================ -->
+    <section class="py-20 px-6 md:px-20 bg-white" id="laptops" aria-label="Laptops for sale in Gulu">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-accent font-semibold text-sm uppercase tracking-wider">Quality Laptops</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mt-2">Laptops for Every Need</h2>
+                <p class="text-gray-500 mt-2 max-w-2xl mx-auto">
+                    Whether you're a student, professional or power user, we have reliable new and refurbished laptops to suit every budget.
+                </p>
+            </div>
 
-<section class="py-20 px-6 md:px-20 bg-lightgray" id="desktops">
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Budget Laptops -->
+                <div class="service-card bg-lightgray rounded-2xl overflow-hidden shadow-sm">
+                    <img src="assets/image/laptop1-600w.webp" 
+                         srcset="assets/image/laptop1-400w.webp 400w, assets/image/laptop1-600w.webp 600w"
+                         sizes="(max-width: 768px) 100vw, 300px"
+                         alt="Budget laptop for students and office work starting at 450,000 UGX"
+                         class="product-img"
+                         width="600" 
+                         height="192"
+                         loading="lazy" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary">Budget Laptops</h3>
+                        <p class="text-sm text-gray-500 mt-1">Perfect for students, office work and everyday computing. Brand new ones</p>
+                        <p class="text-2xl font-bold text-accent mt-3">From UGX 450,000 to UGX 1.2M</p>
+                        <ul class="text-sm text-gray-500 mt-3 space-y-1" aria-label="Budget laptop specifications">
+                            <li>✔ Intel Celeron / Core i3 / Core i5</li>
+                            <li>✔ 4GB–8GB RAM</li>
+                            <li>✔ 128GB–256GB SSD</li>
+                            <li>✔ 3-Month Free servicing</li>
+                        </ul>
+                    </div>
+                </div>
 
-<div class="max-w-6xl mx-auto">
+                <!-- Business Laptops -->
+                <div class="service-card bg-lightgray rounded-2xl overflow-hidden shadow-sm">
+                    <img src="assets/image/laptop-600w.webp" 
+                         srcset="assets/image/laptop-400w.webp 400w, assets/image/laptop-600w.webp 600w"
+                         sizes="(max-width: 768px) 100vw, 300px"
+                         alt="Business laptop for professionals starting at 1.5 million UGX"
+                         class="product-img"
+                         width="600" 
+                         height="192"
+                         loading="lazy" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary">Business Laptops</h3>
+                        <p class="text-sm text-gray-500 mt-1">Reliable performance for professionals and businesses. Brand new ones</p>
+                        <p class="text-2xl font-bold text-accent mt-3">UGX 1.5M – 3.5M</p>
+                        <ul class="text-sm text-gray-500 mt-3 space-y-1" aria-label="Business laptop specifications">
+                            <li>✔ Dell Latitude</li>
+                            <li>✔ HP EliteBook</li>
+                            <li>✔ Lenovo ThinkPad</li>
+                            <li>✔ 6-Month Free servicing</li>
+                        </ul>
+                    </div>
+                </div>
 
-<div class="text-center mb-16">
+                <!-- Premium Laptops -->
+                <div class="service-card bg-lightgray rounded-2xl overflow-hidden shadow-sm">
+                    <img src="assets/image/laptop2-600w.webp" 
+                         srcset="assets/image/laptop2-400w.webp 400w, assets/image/laptop2-600w.webp 600w"
+                         sizes="(max-width: 768px) 100vw, 300px"
+                         alt="Performance laptop for creators and gamers starting at 3.5 million UGX"
+                         class="product-img"
+                         width="600" 
+                         height="192"
+                         loading="lazy" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary">Performance Laptops</h3>
+                        <p class="text-sm text-gray-500 mt-1">High-performance laptops for creators, developers and gamers.</p>
+                        <p class="text-2xl font-bold text-accent mt-3">From UGX 3.5M</p>
+                        <ul class="text-sm text-gray-500 mt-3 space-y-1" aria-label="Performance laptop specifications">
+                            <li>✔ Core i7 / Ryzen 7+</li>
+                            <li>✔ 16GB+ RAM</li>
+                            <li>✔ SSD Storage</li>
+                            <li>✔ 1-Year Free servicing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<span class="text-accent font-semibold text-sm uppercase tracking-wider">
-Desktop Computers
-</span>
+    <!-- ============================================ -->
+    <!-- DESKTOP SALES SECTION                        -->
+    <!-- ============================================ -->
+    <section class="py-20 px-6 md:px-20 bg-lightgray" id="desktops" aria-label="Desktop computers for sale in Gulu">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-accent font-semibold text-sm uppercase tracking-wider">Desktop Computers</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mt-2">Desktop PCs for Home & Business</h2>
+                <p class="text-gray-500 mt-2 max-w-2xl mx-auto">
+                    Powerful desktop computers for schools, offices, businesses, gaming and professional work.
+                </p>
+            </div>
 
-<h2 class="text-3xl md:text-4xl font-bold text-primary mt-2">
-Desktop PCs for Home & Business
-</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Budget Desktops -->
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm">
+                    <img src="assets/image/desktop1-600w.webp" 
+                         srcset="assets/image/desktop1-400w.webp 400w, assets/image/desktop1-600w.webp 600w"
+                         sizes="(max-width: 768px) 100vw, 300px"
+                         alt="Budget desktop computer for learning and office work starting at 750,000 UGX"
+                         class="product-img"
+                         width="600" 
+                         height="192"
+                         loading="lazy" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary">Budget Desktops</h3>
+                        <p class="text-sm text-gray-500 mt-1">Affordable desktops for learning, browsing and office work. Either second-hand or Refurbished</p>
+                        <p class="text-2xl font-bold text-accent mt-3">From UGX 750,000</p>
+                        <ul class="text-sm text-gray-500 mt-3 space-y-1" aria-label="Budget desktop specifications">
+                            <li>✔ Core 2 Duo / Core i3</li>
+                            <li>✔ 4GB RAM</li>
+                            <li>✔ 250GB HDD / 128GB SSD</li>
+                            <li>✔ 3-Month Free servicing</li>
+                        </ul>
+                    </div>
+                </div>
 
-<p class="text-gray-500 mt-2 max-w-2xl mx-auto">
-Powerful desktop computers for schools, offices, businesses, gaming and professional work.
-</p>
+                <!-- Business Desktops -->
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm">
+                    <img src="assets/image/desktop2-600w.webp" 
+                         srcset="assets/image/desktop2-400w.webp 400w, assets/image/desktop2-600w.webp 600w"
+                         sizes="(max-width: 768px) 100vw, 300px"
+                         alt="Business desktop computer for offices starting at 1.5 million UGX"
+                         class="product-img"
+                         width="600" 
+                         height="192"
+                         loading="lazy" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary">Business Desktops</h3>
+                        <p class="text-sm text-gray-500 mt-1">Reliable desktop PCs built for offices and businesses. Refurbished models</p>
+                        <p class="text-2xl font-bold text-accent mt-3">UGX 1.5M – 3.5M</p>
+                        <ul class="text-sm text-gray-500 mt-3 space-y-1" aria-label="Business desktop specifications">
+                            <li>✔ Dell OptiPlex</li>
+                            <li>✔ HP EliteDesk</li>
+                            <li>✔ Lenovo ThinkCentre</li>
+                            <li>✔ 6-Month Free servicing</li>
+                        </ul>
+                    </div>
+                </div>
 
-</div>
-
-<div class="grid md:grid-cols-3 gap-6">
-
-<!-- Budget -->
-
-<div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm">
-
-   <img src="assets/image/desktop1.jpg"class="h-48 w-full object-cover">
-
-<div class="p-6">
-
-<h3 class="text-xl font-bold text-primary">
-Budget Desktops
-</h3>
-
-<p class="text-sm text-gray-500 mt-1">
-Affordable desktops for learning, browsing and office work. Either second-hand or Refurbished
-</p>
-
-<p class="text-2xl font-bold text-accent mt-3">
-From UGX 750,000
-</p>
-
-<ul class="text-sm text-gray-500 mt-3 space-y-1">
-<li>✔ Core 2 Duo / Core i3</li>
-<li>✔ 4GB RAM</li>
-<li>✔ 250GB HDD / 128GB SSD</li>
-<li>✔ 3-Month Free servicing</li>
-</ul>
-
-</div>
-
-</div>
-
-<!-- Business -->
-
-<div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm">
-
-   <img src="assets/image/desktop2.jpg"class="h-48 w-full object-cover">
-
-<div class="p-6">
-
-<h3 class="text-xl font-bold text-primary">
-Business Desktops
-</h3>
-
-<p class="text-sm text-gray-500 mt-1">
-Reliable desktop PCs built for offices and businesses. Refurbished models
-</p>
-
-<p class="text-2xl font-bold text-accent mt-3">
-UGX 1.5M – 3.5M
-</p>
-
-<ul class="text-sm text-gray-500 mt-3 space-y-1">
-<li>✔ Dell OptiPlex</li>
-<li>✔ HP EliteDesk</li>
-<li>✔ Lenovo ThinkCentre</li>
-<li>✔ 6-Month Free servicing</li>
-</ul>
-
-</div>
-
-</div>
-
-<!-- Premium -->
-
-<div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm">
-
-   <img src="assets/image/desktop3.jpg"class="h-48 w-full object-cover">
-
-<div class="p-6">
-
-<h3 class="text-xl font-bold text-primary">
-Perfomance Desktops
-</h3>
-
-<p class="text-sm text-gray-500 mt-1">
-High-performance desktops for engineering, design, AI and gaming.
-</p>
-
-<p class="text-2xl font-bold text-accent mt-3">
-From UGX 4.5M
-</p>
-
-<ul class="text-sm text-gray-500 mt-3 space-y-1">
-<li>✔ Core i7 / Ryzen 7+</li>
-<li>✔ 16GB+ RAM</li>
-<li>✔ SSD Storage</li>
-<li>✔ 1-Year Free servicing</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
+                <!-- Premium Desktops -->
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm">
+                    <img src="assets/image/desktop3-600w.webp" 
+                         srcset="assets/image/desktop3-400w.webp 400w, assets/image/desktop3-600w.webp 600w"
+                         sizes="(max-width: 768px) 100vw, 300px"
+                         alt="Performance desktop computer for engineering and gaming starting at 4.5 million UGX"
+                         class="product-img"
+                         width="600" 
+                         height="192"
+                         loading="lazy" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary">Performance Desktops</h3>
+                        <p class="text-sm text-gray-500 mt-1">High-performance desktops for engineering, design, AI and gaming.</p>
+                        <p class="text-2xl font-bold text-accent mt-3">From UGX 4.5M</p>
+                        <ul class="text-sm text-gray-500 mt-3 space-y-1" aria-label="Performance desktop specifications">
+                            <li>✔ Core i7 / Ryzen 7+</li>
+                            <li>✔ 16GB+ RAM</li>
+                            <li>✔ SSD Storage</li>
+                            <li>✔ 1-Year Free servicing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ============================================ -->
     <!-- LOCATION & CONTACT SECTION                  -->
     <!-- ============================================ -->
-    <section class="py-20 px-6 md:px-20 bg-white" id="contact">
+    <section class="py-20 px-6 md:px-20 bg-white" id="contact" aria-label="Contact PC Doc in Gulu">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right">
@@ -670,35 +603,35 @@ From UGX 4.5M
                     </p>
                     <div class="mt-6 space-y-4">
                         <div class="flex items-start gap-4">
-                            <i class="fas fa-map-marker-alt text-accent text-xl mt-1"></i>
+                            <i class="fas fa-map-marker-alt text-accent text-xl mt-1" aria-hidden="true"></i>
                             <div>
                                 <p class="font-semibold text-primary">Address</p>
                                 <p class="text-gray-500">Gulu City Mall, First Floor, Room 12, Gulu, Uganda</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <i class="fas fa-phone text-accent text-xl mt-1"></i>
+                            <i class="fas fa-phone text-accent text-xl mt-1" aria-hidden="true"></i>
                             <div>
                                 <p class="font-semibold text-primary">Call</p>
                                 <p class="text-gray-500">0791 791035</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <i class="fab fa-whatsapp text-accent text-xl mt-1"></i>
+                            <i class="fab fa-whatsapp text-accent text-xl mt-1" aria-hidden="true"></i>
                             <div>
                                 <p class="font-semibold text-primary">WhatsApp</p>
                                 <p class="text-gray-500">0750 047247</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <i class="fas fa-envelope text-accent text-xl mt-1"></i>
+                            <i class="fas fa-envelope text-accent text-xl mt-1" aria-hidden="true"></i>
                             <div>
                                 <p class="font-semibold text-primary">Email</p>
                                 <p class="text-gray-500">pcdocgulu@gmail.com</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <i class="fas fa-clock text-accent text-xl mt-1"></i>
+                            <i class="fas fa-clock text-accent text-xl mt-1" aria-hidden="true"></i>
                             <div>
                                 <p class="font-semibold text-primary">Working Hours</p>
                                 <p class="text-gray-500">Mon - Wed: 9:00 AM - 5:00 PM<br />Thur: 9:00 AM - 12:00 PM<br />Sat: 9:00 AM - 4:00 PM<br />Sun: 3:00 PM - 5:00 PM</p>
@@ -708,22 +641,23 @@ From UGX 4.5M
                     <div class="flex gap-4 mt-6">
                         <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I%20need%20help%20with%20my%20computer."
                            target="_blank"
+                           rel="noopener noreferrer"
                            class="bg-accent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full transition shadow-lg hover:shadow-orange-500/30">
-                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+                            <i class="fab fa-whatsapp mr-2" aria-hidden="true"></i> WhatsApp Us
                         </a>
                         <a href="tel:+256791791035"
                            class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-full transition">
-                            <i class="fas fa-phone mr-2"></i> Call Now
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i> Call Now
                         </a>
                     </div>
                 </div>
                 <div data-aos="fade-left" class="relative">
-                    <div class="bg-repair-8 h-96 rounded-2xl shadow-xl flex items-center justify-center text-white text-6xl">
-                        <i class="fas fa-store text-primary/20 text-9xl"></i>
+                    <div class="bg-repair-8 h-96 rounded-2xl shadow-xl flex items-center justify-center text-white text-6xl" role="img" aria-label="PC Doc office location at Gulu City Mall">
+                        <i class="fas fa-store text-primary/20 text-9xl" aria-hidden="true"></i>
                     </div>
                     <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4">
                         <div class="flex items-center gap-3">
-                            <i class="fas fa-map-pin text-accent text-2xl"></i>
+                            <i class="fas fa-map-pin text-accent text-2xl" aria-hidden="true"></i>
                             <div>
                                 <p class="font-bold text-primary">PC Doc</p>
                                 <p class="text-xs text-gray-500">Room 12, First Floor</p>
@@ -738,7 +672,7 @@ From UGX 4.5M
     <!-- ============================================ -->
     <!-- FINAL CALL TO ACTION                        -->
     <!-- ============================================ -->
-    <section class="gradient-bg py-20 px-6 md:px-20 text-center text-white">
+    <section class="gradient-bg py-20 px-6 md:px-20 text-center text-white" aria-label="Book a repair now">
         <div class="max-w-3xl mx-auto" data-aos="fade-up">
             <h2 class="text-3xl md:text-5xl font-bold">
                 Stop Stressing. <br />
@@ -749,12 +683,13 @@ From UGX 4.5M
             </p>
             <a href="https://wa.me/256750047247?text=Hi%20PC%20Doc!%20I%20need%20help%20with%20my%20computer.%20Please%20assist%20me."
                target="_blank"
+               rel="noopener noreferrer"
                class="inline-block bg-accent hover:bg-orange-600 text-white font-bold py-4 px-12 rounded-full mt-8 transition-all shadow-lg hover:shadow-orange-500/30 text-lg">
-                <i class="fab fa-whatsapp mr-2"></i>
+                <i class="fab fa-whatsapp mr-2" aria-hidden="true"></i>
                 Book Now on WhatsApp
             </a>
             <p class="text-sm text-gray-400 mt-4">
-                <i class="fas fa-clock mr-1"></i> Responses within 5 minutes
+                <i class="fas fa-clock mr-1" aria-hidden="true"></i> Responses within 5 minutes
             </p>
         </div>
     </section>
@@ -765,42 +700,54 @@ From UGX 4.5M
     <footer class="bg-primary/95 text-gray-300 py-8 px-6 md:px-20">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
             <p>&copy; 2026 PC Doc. All rights reserved. | Gulu, Uganda</p>
-            <div class="flex gap-6 mt-4 md:mt-0">
+            <nav class="flex gap-6 mt-4 md:mt-0" aria-label="Footer navigation">
                 <a href="#" class="hover:text-white transition">Privacy Policy</a>
                 <a href="#" class="hover:text-white transition">Terms of Service</a>
-                <a href="https://wa.me/256750047247" target="_blank" class="hover:text-white transition">
-                    <i class="fab fa-whatsapp"></i> Contact
+                <a href="https://wa.me/256750047247" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Contact
                 </a>
-            </div>
+            </nav>
         </div>
     </footer>
 
     <!-- ============================================ -->
-    <!-- SCRIPTS                                     -->
+    <!-- SCRIPTS (Deferred & Async)                   -->
     <!-- ============================================ -->
-
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- AOS Animation Library (Deferred) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    
+    <!-- Main initialization - runs after DOM is ready -->
     <script>
-        AOS.init({
-            once: true,
-            offset: 50,
-            duration: 800,
-        });
-    </script>
-
-    <!-- Smooth scroll for anchor links -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    once: true,
+                    offset: 50,
+                    duration: 800,
+                });
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // Update URL without causing page jump
+                        history.pushState(null, null, href);
+                    }
+                });
             });
         });
     </script>
+
+
 
 </body>
 </html>
